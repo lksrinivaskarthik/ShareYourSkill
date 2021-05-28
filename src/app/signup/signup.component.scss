@@ -1,0 +1,35 @@
+.body{
+    margin:0;
+    padding: 0;
+    background-size: cover;
+    background-position:center ;
+    font-family: sans-serif;
+}
+.sign_up_form{
+    width:280px;
+    box-shadow: 0 3px 3px 1px #000000;
+    padding: 20px;
+    margin:auto;
+    text-align:center;
+    border-radius: 10px;
+}
+.sign_up_form h1{
+    color: rgb(24, 24, 82);
+    margin-bottom: 30px;
+}
+.sign_up_btn{
+    border-radius: 20cm;
+    width: 80px;
+    padding: 6px;
+    cursor: pointer;
+    outline: none;
+    background-color: rgb(113, 197, 223);
+}
+.input-box{
+    border-radius: 20px;
+    margin: 10px 1px;
+    outline: none;
+    padding: 7px;
+    width: 100%;
+    border: 1px solid #000000;
+}
