@@ -1,12 +1,20 @@
 <div class="sign_up_form">
   <h1>Sign Up Form</h1>
-  <form>
-    <input type="text" class="input-box" placeholder="First Name" />
-    <input type="text" class="input-box" placeholder="Last Name" />
-    <input type="email" class="input-box" placeholder="Email" />
-    <input type="password" class="input-box" placeholder="Password" />
-    <input type="password" class="input-box" placeholder="Confirm Password" />
-    <p>Already have an account?<a href=""> Login</a></p>
-    <button type="button" class="sign_up_btn">Sign Up</button>
+  <form id="form" [formGroup]="userRegisterForm" (ngSubmit)="submitFormDetails()">
+    <input type="text" class="input-box" placeholder="User Name*" formControlName="userName" />
+    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.userName}}</span>
+
+    <input type="email" class="input-box" placeholder="Email*" formControlName="email" />
+    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.email}}</span>
+
+    <input type="password" class="input-box" placeholder="Password*" formControlName="password" />
+    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.password}}</span>
+
+    <input type="password" class="input-box" placeholder="Confirm Password*" formControlName="confirmPassword"/>
+    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.confirmPassword}}</span>
+    <span class="text-danger" *ngIf="!this.isMatched" >Passwords didn't matched</span>
+    
+    <p>Already have an account?<a (click)="navigateToLogin()"> Login</a></p>
+    <button type="submit" class="sign_up_btn">Sign Up</button>
   </form>
 </div>
