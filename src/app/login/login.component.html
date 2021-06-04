@@ -1,40 +1,43 @@
-<div class="row">
-  <div class="col-xs-4 "></div>
-   <!--COL-6-->
-  <div class="col-xs-4">
-          <div id="Form" class="card card-body mb-3 border-secondary  text-dark" style="border-radius: 3%; box-shadow: 0px 0px 4px black;">
-            <div class="h1 text-center p-4 mt-0">Login</div>
-          <!--Form-->
-          <form id="form" [formGroup]="userLoginForm" (ngSubmit)="submitLoginForm()">
-            <!--Username Field-->
-            <div class="form-group">
-              <div class="h4 ml-2">Email-Id<span class= "text-danger" > *</span></div>
-              <div class="input-group" >
-                <input type="text or email" class="form-control" id="username" placeholder="Username" formControlName="email">
-              </div>
-              <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{ formerrors.email }}</span>
-            </div>
-            <!--Password Field-->
-            <div class="form-group">
-              <div class="h4 ml-2">Password<span class= "text-danger" > *</span></div>
-              <div class="input-group ">
-                <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
-              </div> 
-              <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{ formerrors.password }}</span>
-             </div> 
-            <!--Login Button-->
-            <div class="text-center">
-              <button type="submit" class="btn bg-danger text-white text-center">Login</button>
-            </div>
-            <div class="h5 text-center">
-              <a href="#" style="text-decoration: unset;">Forgot Password?</a>
-            </div>
-            <br>
-            <span class="h5">Not Registered?
-                <a (click)="navigateToSignup()" style="text-decoration: unset; color: tomato; cursor: pointer;" >Click here to create an account</a>
-            </span>
-          </form>  
+
+<div class="container">
+    <div class="img">
+      
+   <div class="imgcard">
+       <div class="cardstyle card">
+    <div class="login text-center">Log In </div>
+    <div id="Form" class="card-body mb-3 ">
+    <!--Form-->
+    <form id="form" [formGroup]="userLoginForm" (ngSubmit)="submitLoginForm()">
+      <!--Username Field-->
+      <div class="form-group">
+        <div class="emailpass ml-2">Email-Id<span class= "text-danger" > *</span></div>
+        <div class="input-group" >
+          <input type="text or email" size="50" class="form-control" id="username" placeholder="Username" formControlName="email">
         </div>
+        <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{ formerrors.email }}</span>
+      </div>
+      <!--Password Field-->
+      <div class="form-group">
+        <div class="emailpass ml-2">Password<span class= "text-danger" > *</span></div>
+        <div class="input-group ">
+          <input type="password" size="50" class="form-control" id="password" placeholder="Password" formControlName="password">
+        </div> 
+        <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{ formerrors.password }}</span>
+       </div> 
+      <!--Login Button-->
+      <div class="loginbutton">
+        <button type="submit" class="btn bg-dark text-white m-2">Login</button>
+      </div>
+      <a href="#" class="forgotpass">Forgot Password?</a> 
+      <br>
+      <div class="notregistered">Not Registered?</div>
+      <div class="newacc"><a (click)="navigateToSignup()" >Click here to create an account</a>
+      </div>
+    </form>  
   </div>
-  <div class="col-xs-4"></div>
+</div>
+  </div>
+  
+
+  </div>
 </div>

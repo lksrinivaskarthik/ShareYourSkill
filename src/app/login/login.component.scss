@@ -1,11 +1,57 @@
-.card_dec{
-  border-radius: 3%;
-  box-shadow: 0px 0px 4px black;
-  width: 25%;
-  margin: auto;
-  margin-top: 5%;
+.cardstyle{
+  padding: 2%;
+  width: fit-content;
+  margin: 5%;
 }
-.label_style{
-    font-size: medium;
-    margin-bottom: 4px;
+.img{
+  background-image:url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80");
+  width: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5%;
+}
+.forgotpass{
+  text-decoration: unset;
+  color:red;
+  font-weight: 500;
+  margin: 5px;
+  justify-content: center;
+  display: flex;
+}
+.newacc{
+  text-decoration: unset;
+  color:red;
+  cursor: pointer;
+  padding: 0%;
+  justify-content: center;
+  display: flex;
+}
+.loginbutton{
+  justify-content: center;
+  display: flex;
+}
+.emailpass{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:500;
+  font-size:medium;
+  color: black;
+}
+.login{
+  font-family:'Times New Roman', Times, serif;
+  font-weight:500;
+  font-size:xx-large;
+  padding: 25px;
+  padding-bottom: 0px;
+}
+.notregistered{
+  text-align: center;
+}
+.imgcard{
+  justify-content: center;
+  display: flex;
+}
+.container{
+  justify-content: center;
+  display: flex;
 }
