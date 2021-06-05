@@ -1,15 +1,18 @@
-.cardstyle{
-  padding: 2%;
-  width: fit-content;
-  margin: 5%;
+.card{
+  width:fit-content;
+  padding:2%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .img{
-  background-image:url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80");
-  width: 75%;
+  background-image:url("../../assets/SYSS.png");
   background-position: center;
+  height:594px;
+  width:100%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 5%;
+  display:flex;
+  justify-content: center;
 }
 .forgotpass{
   text-decoration: unset;
@@ -46,12 +49,4 @@
 }
 .notregistered{
   text-align: center;
-}
-.imgcard{
-  justify-content: center;
-  display: flex;
-}
-.container{
-  justify-content: center;
-  display: flex;
 }

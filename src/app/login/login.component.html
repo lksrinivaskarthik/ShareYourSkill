@@ -1,43 +1,64 @@
-
-<div class="container">
-    <div class="img">
-      
-   <div class="imgcard">
-       <div class="cardstyle card">
-    <div class="login text-center">Log In </div>
-    <div id="Form" class="card-body mb-3 ">
-    <!--Form-->
-    <form id="form" [formGroup]="userLoginForm" (ngSubmit)="submitLoginForm()">
-      <!--Username Field-->
-      <div class="form-group">
-        <div class="emailpass ml-2">Email-Id<span class= "text-danger" > *</span></div>
-        <div class="input-group" >
-          <input type="text or email" size="50" class="form-control" id="username" placeholder="Username" formControlName="email">
+<div class="img m-0">
+  <div class="card">
+    <div class="login text-center">Log In</div>
+    <div id="Form" class="card-body mb-3">
+      <!--Form-->
+      <form
+        id="form"
+        [formGroup]="userLoginForm"
+        (ngSubmit)="submitLoginForm()"
+      >
+        <!--Username Field-->
+        <div class="form-group">
+          <div class="emailpass ml-2">
+            Email-Id<span class="text-danger"> *</span>
+          </div>
+          <div class="input-group">
+            <input
+              type="text or email"
+              size="50"
+              class="form-control"
+              id="username"
+              placeholder="Username"
+              formControlName="email"
+            />
+          </div>
+          <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{
+            formerrors.email
+          }}</span>
         </div>
-        <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{ formerrors.email }}</span>
-      </div>
-      <!--Password Field-->
-      <div class="form-group">
-        <div class="emailpass ml-2">Password<span class= "text-danger" > *</span></div>
-        <div class="input-group ">
-          <input type="password" size="50" class="form-control" id="password" placeholder="Password" formControlName="password">
-        </div> 
-        <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{ formerrors.password }}</span>
-       </div> 
-      <!--Login Button-->
-      <div class="loginbutton">
-        <button type="submit" class="btn bg-dark text-white m-2">Login</button>
-      </div>
-      <a href="#" class="forgotpass">Forgot Password?</a> 
-      <br>
-      <div class="notregistered">Not Registered?</div>
-      <div class="newacc"><a (click)="navigateToSignup()" >Click here to create an account</a>
-      </div>
-    </form>  
-  </div>
-</div>
-  </div>
-  
-
+        <!--Password Field-->
+        <div class="form-group">
+          <div class="emailpass ml-2">
+            Password<span class="text-danger"> *</span>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              size="50"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+          </div>
+          <span class="text-danger" *ngIf="!this.userLoginForm.valid">{{
+            formerrors.password
+          }}</span>
+        </div>
+        <!--Login Button-->
+        <div class="loginbutton">
+          <button type="submit" class="btn bg-dark text-white m-2">
+            Login
+          </button>
+        </div>
+        <a href="#" class="forgotpass">Forgot Password?</a>
+        <br />
+        <div class="notregistered">Not Registered?</div>
+        <div class="newacc">
+          <a (click)="navigateToSignup()">Click here to create an account</a>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
