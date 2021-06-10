@@ -1,20 +1,32 @@
-<div class="sign_up_form">
-  <h1>Sign Up Form</h1>
-  <form id="form" [formGroup]="userRegisterForm" (ngSubmit)="submitFormDetails()">
-    <input type="text" class="input-box" placeholder="User Name*" formControlName="userName" />
-    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.userName}}</span>
+<div class="row m-5">
+  <div class="col-sm-2"></div>
+  
+  <div class="col-sm-4 p-0">
+    <img  src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8&w=1000&q=80">
+  </div>
+  <div class="col-sm-4 p-0">
+  <div class="sign_up_form card">
+    <h1>Sign Up</h1>
+    <form id="form" [formGroup]="userRegisterForm" (ngSubmit)="submitFormDetails()">
+      <input type="text" class="input-box" placeholder="User Name*" formControlName="userName" />
+      <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.userName}}</span>
+  
+      <input type="email" class="input-box" placeholder="Email*" formControlName="email" />
+      <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.email}}</span>
+  
+      <input type="password" class="input-box" placeholder="Password*" formControlName="password" />
+      <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.password}}</span>
+  
+      <input type="password" class="input-box" placeholder="Confirm Password*" formControlName="confirmPassword"/>
+      <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.confirmPassword}}</span>
+      <span class="text-danger" *ngIf="!this.isMatched" >Passwords didn't matched</span>
+      <br>
+      <p>Already have an account?<a (click)="navigateToLogin()"> Login</a></p>
+      <button type="submit" class="sign_up_btn">Sign Up</button>
+    </form>
+  </div>
 
-    <input type="email" class="input-box" placeholder="Email*" formControlName="email" />
-    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.email}}</span>
-
-    <input type="password" class="input-box" placeholder="Password*" formControlName="password" />
-    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.password}}</span>
-
-    <input type="password" class="input-box" placeholder="Confirm Password*" formControlName="confirmPassword"/>
-    <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.confirmPassword}}</span>
-    <span class="text-danger" *ngIf="!this.isMatched" >Passwords didn't matched</span>
-    
-    <p>Already have an account?<a (click)="navigateToLogin()"> Login</a></p>
-    <button type="submit" class="sign_up_btn">Sign Up</button>
-  </form>
+  
 </div>
+<div class="col-sm-2"></div>
+  </div>
