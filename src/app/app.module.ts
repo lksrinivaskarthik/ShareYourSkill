@@ -8,13 +8,19 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AddCourseComponent } from './add-course/add-course.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    NavigationComponent
+    NavigationComponent,
+    ProfileComponent,
+    EditProfileComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,
