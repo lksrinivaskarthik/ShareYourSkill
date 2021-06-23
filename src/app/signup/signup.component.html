@@ -1,4 +1,4 @@
-<div class="row m-5">
+git<div class="row m-5">
   <div class="col-sm-2"></div>
   
   <div class="col-sm-4 p-0">
@@ -19,7 +19,7 @@
   
       <input type="password" class="input-box" placeholder="Confirm Password*" formControlName="confirmPassword"/>
       <span class="text-danger" *ngIf="!this.userRegisterForm.valid">{{ formerrors.confirmPassword}}</span>
-      <span class="text-danger" *ngIf="!this.isMatched" >Passwords didn't matched</span>
+      <span class="text-danger" *ngIf="!this.isMatched" >Passwords didn't match</span>
       <br>
       <p>Already have an account?<a (click)="navigateToLogin()"> Login</a></p>
       <button type="submit" class="sign_up_btn">Sign Up</button>

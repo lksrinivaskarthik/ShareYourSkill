@@ -1,1 +1,56 @@
-<p>add-course works!</p>
+<div class="main">
+    <div class="card">
+      <div class="card-body">
+        <form [formGroup]="addCourseForm" (ngSubmit)="submitAddCourseForm()">
+            <h1 class="mb-4">Course Details</h1>
+            <!--Course Name-->
+            <div class="form-group">
+                <label>Course Name<small class="text-danger"> *</small></label>
+                <input type="text" class="form-control  mb-2" placeholder="Enter course name" formControlName="courseName">
+                <span class="text-danger" *ngIf="!this.addCourseForm.valid">{{ formerrors.courseName }}</span>
+            </div>
+            <!--Cost-->
+            <div class="form-group">
+                <label>Cost<small class="text-danger"> *</small></label>
+                <div class="input-group">
+                    <div class="input-group-prepend  mb-2">
+                      <div class="input-group-text">&#8377;</div>
+                    </div>
+                    <input type="number" class="form-control  mb-2" placeholder="Enter cost " formControlName="cost">
+                </div>
+                <span class="text-danger" *ngIf="!this.addCourseForm.valid">{{ formerrors.cost }}</span>
+            </div>
+
+            <!--Course Duration-->
+            <div class="form-group">
+                <label>Course Duration<small class="text-danger"> *</small></label>
+                <input type="week or month" class="form-control  mb-2" placeholder="Enter course duration" formControlName="duration">
+                <span class="text-danger" *ngIf="!this.addCourseForm.valid">{{ formerrors.duration }}</span>
+            </div>
+
+            <!--Demo video link-->
+            <div class="form-group">
+                <label>Demo video link<small class="text-danger"> *</small></label>
+                <input type="url" class="form-control  mb-2" placeholder="Video Link" formControlName="demoVideoLink">
+            </div>
+
+            <!--Certificate link-->
+            <div class="form-group">
+                <label>Certificate link<small class="text-danger"> *</small></label>
+                <input type="url" class="form-control  mb-2" placeholder="Certificate URL" formControlName="certificateLink">
+                <span class="text-danger" *ngIf="!this.addCourseForm.valid">{{ formerrors.certificateLink }}</span>
+            </div>
+
+            <!--Experience-->
+            <div class="form-group">
+                <label>Experience<small class="text-danger"> *</small></label>
+                <textarea class="form-control " placeholder="Your Experience!!" formControlName="experience"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-dark mt-4 d-block mx-auto ">Submit</button>
+            
+        </form>
+        
+      </div>
+    </div>
+  </div>
