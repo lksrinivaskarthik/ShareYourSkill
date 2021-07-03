@@ -1,6 +1,6 @@
 <img src="https://marketing.dcassetcdn.com/blog/2016/April/tips-for-freelancers/DevelopSkills_828x300.jpg" width="180px" class="ml-3">
 <!--Navbar-->
-<div class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <button data-toggle="collapse" data-target="#menu" class="navbar-toggler text-align-right" type="button" >
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,11 +21,10 @@
         </li>
       </ul>
     </div>
-    <div class="col-sm-2  mt-2">
-      <button class="btn  bg-danger mr-2 "><a  class="action" routerLink="login">LogIn</a></button>
-      <button class="btn bg-danger">
-        <a class="action" routerLink="signup">SignUp</a></button>
+    <div class="col-sm-2  mt-2 d-flex ">
+      <button class="btn  bg-danger ml-auto"><a  class="action" routerLink="login">LogIn</a></button>
+      <button class="btn bg-danger ml-auto"><a class="action" routerLink="signup">SignUp</a></button>
+      <button class="btn bg-danger text-white ml-auto" (click)="navigateToLogin()">Log out</button>
     </div>
     </div>
-  </div>
-
+  </nav>

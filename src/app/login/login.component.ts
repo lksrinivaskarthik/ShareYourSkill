@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
       'password': '',
     };
 
-  constructor(private router:Router , private FormBuilder : FormBuilder) { }
+  constructor(private router:Router , private FormBuilder : FormBuilder, private auth:AuthService) { }
 
   ngOnInit(): void {
 
@@ -48,7 +49,8 @@ export class LoginComponent implements OnInit {
 
   submitLoginForm():void {
     if(this.userLoginForm.valid) {
-      this.router.navigateByUrl('/home');
+      const instance= this.userLoginForm.value;
+      this.auth.login(instance.email, instance.password);
     }
     else {
       console.log('invalid entries');

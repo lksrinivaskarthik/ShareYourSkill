@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FormBuilder,Validators} from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -35,7 +36,7 @@ export class SignupComponent implements OnInit {
         'confirmPassword':''
       };
    
-  constructor(private router:Router,private FormBuilder : FormBuilder) {
+  constructor(private router:Router,private FormBuilder : FormBuilder, private auth: AuthService) {
     
    }
 
@@ -67,10 +68,8 @@ export class SignupComponent implements OnInit {
     }
     
     else if(this.userRegisterForm.valid) {
-      console.log(this.userRegisterForm.value);
+      this.auth.signUp(formInstance.email, formInstance.password);
       this.isMatched = true;
-      this.router.navigateByUrl('/login');
-
     }
     else  {
       console.log('invalid entries');
