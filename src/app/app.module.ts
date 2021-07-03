@@ -11,6 +11,9 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +26,8 @@ import { AddCourseComponent } from './add-course/add-course.component';
     AddCourseComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,

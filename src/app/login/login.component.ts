@@ -48,7 +48,6 @@ export class LoginComponent implements OnInit {
 
   submitLoginForm():void {
     if(this.userLoginForm.valid) {
-      console.log(this.userLoginForm.value);
       this.router.navigateByUrl('/home');
     }
     else {
